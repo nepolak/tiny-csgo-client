@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "configurePresets": 
+    [
+        {
+            "name": "includesPreset",
+            "hidden": true,
+            "cacheVariables": 
+            {
+                "HL2SDK-CSGO": "C:\\CPPLibs\\hl2sdk",
+                "ASIO-SRC": "C:\\CPPLibs\\asio-1.24.0"
+            }
+        },
+        {
+            "name": "clangdebug",
+            "displayName": "Clang 15 Debug",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "inherits": [ "clangclcomp", "includesPreset" ],
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ]
+}

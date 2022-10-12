@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "clcomp",
+            "generator": "Ninja",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            }
+        },
+        {
+            "name": "clangclcomp",
+            "hidden": true,
+            "displayName": "Clang 15.0.0",
+            "description": "Using compilers: Clang-Cl",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang-cl.exe",
+                "CMAKE_CXX_COMPILER": "clang-cl.exe",
+                "CMAKE_C_FLAGS": "/DWIN32 /D_WINDOWS /W3 -m32 /EHs /clang:-fuse-ld=lld",
+                "CMAKE_CXX_FLAGS": "/DWIN32 /D_WINDOWS /W3 -m32 /EHs /clang:-fuse-ld=lld",
+                "CMAKE_EXE_LINKER_FLAGS": "/machine:X86",
+                "CMAKE_MODULE_LINKER_FLAGS": "/machine:X86",
+                "CMAKE_SHARED_LINKER_FLAGS": "/machine:X86",
+                "CMAKE_STATIC_LINKER_FLAGS": "/machine:X86"
+            }
+        }
+    ]
+}
